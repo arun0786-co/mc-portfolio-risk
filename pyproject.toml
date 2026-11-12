@@ -1,0 +1,20 @@
+[project]
+name = "mcrisk"
+version = "0.1.0"
+description = "monte carlo portfolio risk: var, expected shortfall, risk contributions, stress tests and a var backtest"
+requires-python = ">=3.11"
+dependencies = ["numpy", "pandas", "scipy", "matplotlib", "yfinance"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mcrisk"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
