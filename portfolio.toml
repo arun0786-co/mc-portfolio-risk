@@ -1,0 +1,26 @@
+# eight large NSE stocks from different sectors, equal weight
+tickers = [
+    "RELIANCE.NS",
+    "TCS.NS",
+    "HDFCBANK.NS",
+    "INFY.NS",
+    "ITC.NS",
+    "LT.NS",
+    "SUNPHARMA.NS",
+    "MARUTI.NS",
+]
+# weights = [0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125]   # default is equal
+start = "2016-01-01"
+end = "2026-11-01"
+
+horizon = 21          # trading days
+paths = 50000
+alphas = [0.95, 0.99]
+drift = "historical"  # or "zero"
+block = 10            # mean block length for the bootstrap, in days
+seed = 7
+
+[backtest]
+window = 500
+lam = 0.94
+paths = 20000
